@@ -22,7 +22,7 @@ class DeleteSoundCommandHandler implements ICommandHandler<Discord.Message> {
     const commandParts = getCommandParts(command.content);
     const serverId = command.guild?.id;
 
-    if (commandParts.length < 1 || !serverId) return null;
+    if (commandParts.length <= 1 || !serverId) return null;
 
     const soundName = commandParts[1];
 
